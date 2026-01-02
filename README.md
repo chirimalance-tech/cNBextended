@@ -4,7 +4,13 @@ Useful resources developed in R that can be used to understand and implement an 
 To install the package, use the following code in R
 
 ```
+install.packages("devtools")
 library(devtools)
+install_github("chirimalance-tech/cNBextended")
+
+# Alternatively
+install.packages("remotes")
+library(remotes)
 install_github("chirimalance-tech/cNBextended")
 ```
 
