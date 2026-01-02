@@ -13,6 +13,7 @@ Code to reproduce Table 2(b) "Number of visits to the physicians office"
 
 ```
 library(AER)
+library(cNBextended)
 
 # Load NMES1988 dataset
 data("NMES1988")
