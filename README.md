@@ -16,7 +16,7 @@ library(AER)
 library(cNB)
 library(cNBextended)
 
-# some information about the mle function and how it works
+# Some information about the mle function and how it works.
 ?ml.ex.cnb
 
 # Load NMES1988 dataset
