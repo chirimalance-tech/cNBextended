@@ -101,7 +101,7 @@ ml.ex.cnb <- function(formula, alpha.formula=~1, delta.formula=~1, eta.formula=~
     delta.hat <- exp(vg.hat) / (1 + exp(vg.hat))
 
     zl.hat <- Z %*% lambda.hat  # eta regression
-    eta.hat <- exp(zl.hat) + 1
+    eta.hat <- exp(zl.hat) 
 
     ll <- sum(dcnbinom	(x = y, mu = mu.hat, alpha = alpha.hat, delta = delta.hat, eta=eta.hat, log=T))
     return(ll)
@@ -156,7 +156,7 @@ ml.ex.cnb <- function(formula, alpha.formula=~1, delta.formula=~1, eta.formula=~
   delta.hat <- exp(vg.hat) / (1 + exp(vg.hat))
 
   zl.hat <- etaZ %*% lambda.hat  #' eta regression
-  eta.hat <- exp(zl.hat) + 1
+  eta.hat <- exp(zl.hat) 
 
 
   lc=sum(dcnbinom(y, mu=mu.hat, alpha = alpha.hat, delta=delta.hat, eta = eta.hat, log = T))
