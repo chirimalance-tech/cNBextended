@@ -9,7 +9,7 @@ install_github("chirimalance-tech/cNBextended")
 ```
 
 # Example
-Code to reproduce table 2(b) "Nuber of visits to the physicians office"
+Code to reproduce Table 2(b) "Number of visits to the physicians office"
 
 ```
 library(AER)
