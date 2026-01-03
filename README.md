@@ -3,7 +3,7 @@ Useful resources developed in R that can be used to understand and implement an 
 
 # SHINY APP
 Along with the development of a R package A R shiny app was developed to explore the behaviours of the cNB-RM
-The app is avaliable here "https://chirimalance-tech.shinyapps.io/cNBextendedApp/"
+The app is avaliable here [![Launch Shiny App](https://img.shields.io/badge/Launch%20App-Click%20Here-brightgreen)](https://chirimalance-tech.shinyapps.io/cNBextendedApp/)
 
 # Example
 Using the package.
