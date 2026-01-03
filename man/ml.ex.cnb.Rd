@@ -2,8 +2,8 @@
 % Please edit documentation in R/Extended Approach cNB ml.R
 \name{ml.ex.cnb}
 \alias{ml.ex.cnb}
-\title{MLE of contaminated negative binomial regression model
-extended to include covariate estimation of all distribution parameters.}
+\title{MLE of Contaminated Negative Binomial Regression Model
+Extended to Include Covariate Estimation of all Distribution Parameters.}
 \usage{
 ml.ex.cnb(
   formula,
