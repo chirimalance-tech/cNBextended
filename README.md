@@ -1,9 +1,16 @@
 # cNBextended
-Useful resources developed in R that can be used to understand and implement an extesion of the Contaminated Negative Binomial Regression Model (cNB-RM). Building on the cNB-RM see "https://github.com/arnootto/cNB"
+Useful resources developed in R that can be used to understand and implement an extesion of the Contaminated Negative Binomial Regression Model (cNB-RM). 
 
-To install the package, use the following code in R
+# SHINY APP
+Along with the development of a R package A R shiny app was developed to explore the behaviours of the cNB-RM
+The app is avaliable here "https://chirimalance-tech.shinyapps.io/cNBextendedApp/"
+
+# Example
+Using the package.
+Code to reproduce Table 4(b) "Number of visits to the physicians office"
 
 ```
+To install the package, use the following code in R
 install.packages("devtools")
 library(devtools)
 install_github("chirimalance-tech/cNBextended")
@@ -12,12 +19,7 @@ install_github("chirimalance-tech/cNBextended")
 install.packages("remotes")
 library(remotes)
 install_github("chirimalance-tech/cNBextended")
-```
 
-# Example
-Code to reproduce Table 4(b) "Number of visits to the physicians office"
-
-```
 library(AER)
 library(cNB)
 library(cNBextended)
