@@ -39,6 +39,7 @@
 #'
 #' @examples
 #' library(AER)
+#' library(cNB)
 #'
 #' # Load NMES1988 dataset
 #' data("NMES1988")
