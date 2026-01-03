@@ -74,52 +74,23 @@ head(NMES1988)
 
 # Construct design matrix
 x <- model.matrix(~ visits + nvisits + ovisits + novisits + emergency + hospital +
-                    health + chronic + adl + region + afam + gender + married +
-                    school + income + employed + insurance + medicaid,
+                  health + chronic + adl + region + afam + gender + married +
+                  school + income + employed + insurance + medicaid,
                   data = NMES1988)
 x <- as.data.frame(x)
 
 options(contrasts = c("contr.treatment", "contr.poly"))
 
-# --- Example 1: regression on the mean (intercept only for alpha, delta, eta)
-cnb_ex_trips_mu <- ml.cnb(formula = visits ~ hospital + insuranceyes + healthpoor +
-                                        chronic + adllimited + gendermale + school + afamyes,
-                          data = x)
-
-# Parameter estimates
-round(cnb_ex_trips_mu$results, 4)
-
-# Information criteria and log-likelihood
-round(cnb_ex_trips_mu$AIC, 4)
-round(cnb_ex_trips_mu$BIC, 4)
-round(cnb_ex_trips_mu$loglike, 4)
-
-
-# --- Example 2: regression on mean and dispersion (intercept only for delta, eta)
-cnb_ex_mu_alpha <- ml.ex.cnb(formula = visits ~ hospital + insuranceyes + healthpoor +
-                                           chronic + adllimited + gendermale + school + afamyes,
-                             alpha.formula = ~ adllimited,
-                             data = x,
-                             method = "CG")
-
-# Parameter estimates
-round(cnb_ex_mu_alpha$results, 4)
-
-# Information criteria and log-likelihood
-round(cnb_ex_mu_alpha$AIC, 4)
-round(cnb_ex_mu_alpha$BIC, 4)
-round(cnb_ex_mu_alpha$loglike, 4)
-
-
-# --- Example 3: regression on mean, dispersion, delta, and eta
-cnb_ex_trips_mu_alpha_delta_eta <- ml.ex.cnb(formula = visits ~ hospital + insuranceyes +
-                                                          healthpoor + chronic + adllimited +
-                                                          gendermale + school + afamyes,
-                                            alpha.formula = ~ adllimited,
-                                            delta.formula = ~ nvisits,
-                                            eta.formula = ~ chronic,
-                                            data = x,
-                                            method = "BFGS")
+# Regression on mean, dispersion, delta, and eta
+cnb_ex_trips_mu_alpha_delta_eta <- ml.ex.cnb(
+  formula = visits ~ hospital + insuranceyes + healthpoor + chronic + adllimited +
+                      gendermale + school + afamyes,
+  alpha.formula = ~ adllimited,
+  delta.formula = ~ nvisits,
+  eta.formula = ~ chronic,
+  data = x,
+  method = "BFGS"
+)
 
 # Parameter estimates
 round(cnb_ex_trips_mu_alpha_delta_eta$results, 4)
@@ -127,6 +98,6 @@ round(cnb_ex_trips_mu_alpha_delta_eta$results, 4)
 # Information criteria and log-likelihood
 round(cnb_ex_trips_mu_alpha_delta_eta$AIC, 4)
 round(cnb_ex_trips_mu_alpha_delta_eta$BIC, 4)
+round(cnb_ex_trips_mu_alpha_delta_eta$HQIC, 4)
 round(cnb_ex_trips_mu_alpha_delta_eta$loglike, 4)
-
 }
