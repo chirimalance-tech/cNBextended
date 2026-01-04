@@ -4,11 +4,11 @@ Along with the development of a R package A R shiny app was developed to explore
 The app is avaliable here   [![Launch Shiny App](https://img.shields.io/badge/Launch%20App-Click%20Here-brightgreen)](https://chirimalance-tech.shinyapps.io/cNBextendedApp/)
 
 
-# cNBextended
+# cNBextended Package
 Useful resources developed in R that can be used to understand and implement an extesion of the Contaminated Negative Binomial Regression Model (cNB-RM). 
 
 
-# Example
+# Package Example
 Using the package.
 Code to reproduce Table 4(b) "Number of visits to the physicians office"
 
