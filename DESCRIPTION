@@ -8,7 +8,8 @@ Authors@R: c(
       email = "lance.chirima@up.ac.za",
       role = c("aut", "cre")
     ),
-    person("Arno", "Otto")
+    person("Arno", "Otto"),
+    person("Andriëtte", " Bekker")
   )
 Description: Provides an extended contaminated negative binomial regression model
     with mean, dispersion, proportion of contamination, and inflation components. Includes the function
